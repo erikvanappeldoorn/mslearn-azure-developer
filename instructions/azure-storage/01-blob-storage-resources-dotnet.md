@@ -24,7 +24,7 @@ In this section of the exercise you create the needed resources in Azure with th
 
 1. In your browser navigate to the Azure portal [https://portal.azure.com](https://portal.azure.com); signing in with your Azure credentials if prompted.
 
-1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new cloud shell in the Azure portal, selecting a ***Bash*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal. If you are prompted to select a storage account to persist your files, select **No storage account required** and then select **Apply**.
+1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new cloud shell in the Azure portal, selecting a ***Bash*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal. If you are prompted to select a storage account to persist your files, select **No storage account required**, your subscription, and then select **Apply**.
 
     > **Note**: If you have previously created a cloud shell that uses a *PowerShell* environment, switch it to ***Bash***.
 
@@ -141,7 +141,7 @@ Now it's time to add the code for the project.
     };
     
     // Run the examples asynchronously, wait for the results before proceeding
-    ProcessAsync().GetAwaiter().GetResult();
+    await ProcessAsync();
     
     Console.WriteLine("\nPress enter to exit the sample application.");
     Console.ReadLine();
@@ -200,7 +200,7 @@ Throughout the rest of the exercise you add code in specified areas to create th
 1. Locate the **// CREATE A CONTAINER** comment, then add the following code directly beneath the comment. Creating a container includes creating an instance of the **BlobServiceClient** class, and then calling the **CreateBlobContainerAsync** method to create the container in your storage account. A GUID value is appended to the container name to ensure that it's unique. The **CreateBlobContainerAsync** method fails if the container already exists.
 
     ```csharp
-    ///Create a unique name for the container
+    // Create a unique name for the container
     string containerName = "wtblob" + Guid.NewGuid().ToString();
     
     // Create the container and return a container client object

@@ -23,7 +23,7 @@ In this section of the exercise you create a resource group and Azure Cosmos DB 
 
 1. In your browser navigate to the Azure portal [https://portal.azure.com](https://portal.azure.com); signing in with your Azure credentials if prompted.
 
-1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new cloud shell in the Azure portal, selecting a ***Bash*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal. If you are prompted to select a storage account to persist your files, select **No storage account required** and then select **Apply**.
+1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new cloud shell in the Azure portal, selecting a ***Bash*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal. If you are prompted to select a storage account to persist your files, select **No storage account required**, your subscription, and then select **Apply**.
 
     > **Note**: If you have previously created a cloud shell that uses a *PowerShell* environment, switch it to ***Bash***.
 
@@ -120,7 +120,7 @@ Now it's time to replace the template code in the **Program.cs** file using the 
     code Program.cs
     ```
 
-1. Replace any existing code with the following code snippet. Be sure to replace the placeholder values for **documentEndpoint** and **primaryKey** following the directions in the code comments.
+1. Replace any existing code with the following code snippet. 
 
     The code provides the overall structure of the app. Review the comments in the code to get an understanding of how it works. To complete the application, you add code in specified areas later in the exercise. 
 
